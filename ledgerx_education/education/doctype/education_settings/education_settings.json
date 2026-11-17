@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 08:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "default_income_account",
+  "vat_account",
+  "vat_rate",
+  "cb1",
+  "default_installments",
+  "interval_months",
+  "sb_sib",
+  "sibling_pct_2",
+  "sibling_pct_3",
+  "cb2",
+  "sibling_pct_4",
+  "sb_acad",
+  "grading_scale",
+  "pass_percent",
+  "cb3",
+  "absence_alert"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_income_account",
+   "fieldtype": "Link",
+   "label": "Default Fees Income Account",
+   "options": "Account",
+   "description": "Used by every fee category that has no income account of its own."
+  },
+  {
+   "fieldname": "vat_account",
+   "fieldtype": "Link",
+   "label": "VAT Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "vat_rate",
+   "fieldtype": "Percent",
+   "label": "VAT on Fees (%)",
+   "default": 0,
+   "description": "Most education fees are exempt: leave 0."
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_installments",
+   "fieldtype": "Int",
+   "label": "Default Number of Installments",
+   "default": 1
+  },
+  {
+   "fieldname": "interval_months",
+   "fieldtype": "Int",
+   "label": "Months Between Installments",
+   "default": 1
+  },
+  {
+   "fieldname": "sb_sib",
+   "fieldtype": "Section Break",
+   "label": "Sibling Discount"
+  },
+  {
+   "fieldname": "sibling_pct_2",
+   "fieldtype": "Percent",
+   "label": "Second Child (%)",
+   "default": 0
+  },
+  {
+   "fieldname": "sibling_pct_3",
+   "fieldtype": "Percent",
+   "label": "Third Child (%)",
+   "default": 0
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sibling_pct_4",
+   "fieldtype": "Percent",
+   "label": "Fourth Child and After (%)",
+   "default": 0
+  },
+  {
+   "fieldname": "sb_acad",
+   "fieldtype": "Section Break",
+   "label": "Academic"
+  },
+  {
+   "fieldname": "grading_scale",
+   "fieldtype": "Link",
+   "label": "Default Grading Scale",
+   "options": "Grading Scale"
+  },
+  {
+   "fieldname": "pass_percent",
+   "fieldtype": "Percent",
+   "label": "Pass Mark (%)",
+   "default": 50
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "absence_alert",
+   "fieldtype": "Int",
+   "label": "Warn the Class Teacher After This Many Absences",
+   "default": 5
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 08:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Education Settings",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Education Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "Education Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "icon": "fa fa-cog",
+ "issingle": 1,
+ "allow_rename": 0
+}

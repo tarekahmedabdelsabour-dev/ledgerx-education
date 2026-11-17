@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 08:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "structure_name",
+  "academic_year",
+  "grade_level",
+  "active",
+  "cb1",
+  "installments",
+  "interval_months",
+  "down_payment_pct",
+  "credit_hour_fee",
+  "sb_items",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "structure_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "grade_level",
+   "fieldtype": "Link",
+   "label": "Grade or Year",
+   "options": "Grade Level",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "installments",
+   "fieldtype": "Int",
+   "label": "Number of Installments",
+   "default": 1
+  },
+  {
+   "fieldname": "interval_months",
+   "fieldtype": "Int",
+   "label": "Months Between Installments",
+   "default": 1
+  },
+  {
+   "fieldname": "down_payment_pct",
+   "fieldtype": "Percent",
+   "label": "Down Payment (%)",
+   "default": 0
+  },
+  {
+   "fieldname": "credit_hour_fee",
+   "fieldtype": "Currency",
+   "label": "Fee per Credit Hour",
+   "description": "University: charged for the hours a student registers."
+  },
+  {
+   "fieldname": "sb_items",
+   "fieldtype": "Section Break",
+   "label": "Fees"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Fees",
+   "options": "Fee Structure Item",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 08:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Fee Structure",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Education Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Registrar",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "field:structure_name",
+ "title_field": "structure_name",
+ "icon": "fa fa-list-alt",
+ "allow_rename": 0
+}

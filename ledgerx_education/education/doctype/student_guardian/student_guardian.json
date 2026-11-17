@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 08:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "guardian",
+  "guardian_name",
+  "relation",
+  "is_payer",
+  "emergency"
+ ],
+ "fields": [
+  {
+   "fieldname": "guardian",
+   "fieldtype": "Link",
+   "label": "Guardian",
+   "options": "Guardian",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "fetch_from": "guardian.guardian_name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "relation",
+   "fieldtype": "Select",
+   "label": "Relation",
+   "options": "Father\nMother\nBrother or Sister\nUncle or Aunt\nGrandparent\nOther",
+   "default": "Father",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_payer",
+   "fieldtype": "Check",
+   "label": "Pays the Fees",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "emergency",
+   "fieldtype": "Check",
+   "label": "Emergency Contact"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 08:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Student Guardian",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [],
+ "istable": 1,
+ "allow_rename": 0
+}

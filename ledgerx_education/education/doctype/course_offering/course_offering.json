@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 08:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "subject",
+  "academic_year",
+  "term_name",
+  "status",
+  "cb1",
+  "grade_level",
+  "section",
+  "teacher",
+  "capacity",
+  "weekly_hours",
+  "sb_sched",
+  "schedule"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Subject",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "term_name",
+   "fieldtype": "Data",
+   "label": "Term or Semester"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nClosed",
+   "default": "Open"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grade_level",
+   "fieldtype": "Link",
+   "label": "Grade or Year",
+   "options": "Grade Level"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Class Section",
+   "description": "Leave empty for a university course that students register for."
+  },
+  {
+   "fieldname": "teacher",
+   "fieldtype": "Link",
+   "label": "Teacher",
+   "options": "Employee",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Capacity",
+   "description": "For courses students register for."
+  },
+  {
+   "fieldname": "weekly_hours",
+   "fieldtype": "Float",
+   "label": "Hours per Week"
+  },
+  {
+   "fieldname": "sb_sched",
+   "fieldtype": "Section Break",
+   "label": "Weekly Schedule"
+  },
+  {
+   "fieldname": "schedule",
+   "fieldtype": "Table",
+   "label": "Schedule",
+   "options": "Course Schedule Slot"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 08:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Course Offering",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Education Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Registrar",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Education Teacher",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "Education Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "hash",
+ "title_field": "title",
+ "icon": "fa fa-clock-o",
+ "search_fields": "subject,teacher,academic_year",
+ "allow_rename": 0
+}

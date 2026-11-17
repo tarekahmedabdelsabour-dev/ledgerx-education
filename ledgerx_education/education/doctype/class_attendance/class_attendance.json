@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 08:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "attendance_date",
+  "section",
+  "course_offering",
+  "cb1",
+  "taken_by",
+  "present_count",
+  "late_count",
+  "absent_count",
+  "sb_st",
+  "students"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ATT-.YYYY.-.#####",
+   "default": "ATT-.YYYY.-.#####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Class Section",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "course_offering",
+   "fieldtype": "Link",
+   "label": "Course (optional)",
+   "options": "Course Offering",
+   "description": "Leave empty for the daily roll of the whole class."
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "taken_by",
+   "fieldtype": "Link",
+   "label": "Taken By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "present_count",
+   "fieldtype": "Int",
+   "label": "Present",
+   "read_only": 1
+  },
+  {
+   "fieldname": "late_count",
+   "fieldtype": "Int",
+   "label": "Late",
+   "read_only": 1
+  },
+  {
+   "fieldname": "absent_count",
+   "fieldtype": "Int",
+   "label": "Absent",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_st",
+   "fieldtype": "Section Break",
+   "label": "Students"
+  },
+  {
+   "fieldname": "students",
+   "fieldtype": "Table",
+   "label": "Students",
+   "options": "Class Attendance Student"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 08:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Class Attendance",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Education Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Teacher",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Registrar",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "icon": "fa fa-check-square-o",
+ "allow_rename": 0
+}

@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 08:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "grade_level",
+  "section_name",
+  "academic_year",
+  "cb1",
+  "capacity",
+  "strength",
+  "homeroom_teacher",
+  "room"
+ ],
+ "fields": [
+  {
+   "fieldname": "grade_level",
+   "fieldtype": "Link",
+   "label": "Grade or Year",
+   "options": "Grade Level",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "section_name",
+   "fieldtype": "Data",
+   "label": "Section",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "A, B, 1, Morning..."
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Capacity",
+   "default": 30
+  },
+  {
+   "fieldname": "strength",
+   "fieldtype": "Int",
+   "label": "Students",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "homeroom_teacher",
+   "fieldtype": "Link",
+   "label": "Class Teacher",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 08:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Class Section",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Education Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Registrar",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Education Teacher",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Education Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "format:{grade_level}-{section_name}-{academic_year}",
+ "title_field": "section_name",
+ "icon": "fa fa-users",
+ "allow_rename": 0
+}

@@ -1,0 +1,419 @@
+{
+ "charts": [
+  {
+   "chart_name": "Students by Grade",
+   "label": "Students by Grade"
+  },
+  {
+   "chart_name": "Students by Stage",
+   "label": "Students by Stage"
+  },
+  {
+   "chart_name": "Applications by Status",
+   "label": "Applications by Status"
+  },
+  {
+   "chart_name": "Applications per Month",
+   "label": "Applications per Month"
+  }
+ ],
+ "content": "[{\"id\": \"134994328b\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Education</b></span>\", \"col\": 12}}, {\"id\": \"3ca1018acf\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student\", \"col\": 3}}, {\"id\": \"c6f8d58647\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Admission Application\", \"col\": 3}}, {\"id\": \"359a901518\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Fee\", \"col\": 3}}, {\"id\": \"b83ea07d08\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Class Attendance\", \"col\": 3}}, {\"id\": \"d716c32ffe\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Students\", \"col\": 3}}, {\"id\": \"a4d9611417\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"New Applications\", \"col\": 3}}, {\"id\": \"9dde35ebec\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Interviews Scheduled\", \"col\": 3}}, {\"id\": \"e3b4b89437\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Accepted, Not Enrolled\", \"col\": 3}}, {\"id\": \"1b3371032e\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Fees to Invoice\", \"col\": 3}}, {\"id\": \"8b4993ecd6\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Invoiced Fees\", \"col\": 3}}, {\"id\": \"7a1f32707f\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Registrations to Confirm\", \"col\": 3}}, {\"id\": \"0d7883c5fe\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Courses\", \"col\": 3}}, {\"id\": \"7ec7b59efc\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Students by Grade\", \"col\": 6}}, {\"id\": \"cc92aeffcd\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Students by Stage\", \"col\": 6}}, {\"id\": \"b7a4984ef9\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Applications by Status\", \"col\": 6}}, {\"id\": \"cbd233dda1\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Applications per Month\", \"col\": 6}}, {\"id\": \"804b675abc\", \"type\": \"card\", \"data\": {\"card_name\": \"Academics\", \"col\": 4}}, {\"id\": \"6fd6548bc3\", \"type\": \"card\", \"data\": {\"card_name\": \"Fees\", \"col\": 4}}, {\"id\": \"d33e9ee157\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}, {\"id\": \"35e096ddf8\", \"type\": \"card\", \"data\": {\"card_name\": \"Setup\", \"col\": 4}}, {\"id\": \"1235fee5d5\", \"type\": \"card\", \"data\": {\"card_name\": \"Related\", \"col\": 4}}]",
+ "creation": "2026-11-17 09:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 1,
+ "icon": "graduation-cap",
+ "idx": 1,
+ "is_hidden": 0,
+ "label": "Education",
+ "links": [
+  {
+   "type": "Card Break",
+   "label": "Academics",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 10,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Academic Year",
+   "link_type": "DocType",
+   "link_to": "Academic Year",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Education Stage",
+   "link_type": "DocType",
+   "link_to": "Education Stage",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Grade Level",
+   "link_type": "DocType",
+   "link_to": "Grade Level",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Class Section",
+   "link_type": "DocType",
+   "link_to": "Class Section",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Subject",
+   "link_type": "DocType",
+   "link_to": "Subject",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Course Offering",
+   "link_type": "DocType",
+   "link_to": "Course Offering",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Course Registration",
+   "link_type": "DocType",
+   "link_to": "Course Registration",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Faculty",
+   "link_type": "DocType",
+   "link_to": "Faculty",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Academic Department",
+   "link_type": "DocType",
+   "link_to": "Academic Department",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Grading Scale",
+   "link_type": "DocType",
+   "link_to": "Grading Scale",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Fees",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 3,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Fee Category",
+   "link_type": "DocType",
+   "link_to": "Fee Category",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Fee Structure",
+   "link_type": "DocType",
+   "link_to": "Fee Structure",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Scholarship",
+   "link_type": "DocType",
+   "link_to": "Scholarship",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Reports",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 5,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Fees Due",
+   "link_type": "Report",
+   "link_to": "Fees Due",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Fee Collection",
+   "link_type": "Report",
+   "link_to": "Fee Collection",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Class Strength",
+   "link_type": "Report",
+   "link_to": "Class Strength",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Attendance Summary",
+   "link_type": "Report",
+   "link_to": "Attendance Summary",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Student Report Card",
+   "link_type": "Report",
+   "link_to": "Student Report Card",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Setup",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 2,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Education Institution",
+   "link_type": "DocType",
+   "link_to": "Education Institution",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Education Settings",
+   "link_type": "DocType",
+   "link_to": "Education Settings",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Related",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 5,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Customer",
+   "link_type": "DocType",
+   "link_to": "Customer",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Sales Invoice",
+   "link_type": "DocType",
+   "link_to": "Sales Invoice",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Payment Entry",
+   "link_type": "DocType",
+   "link_to": "Payment Entry",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Employee",
+   "link_type": "DocType",
+   "link_to": "Employee",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Vehicle",
+   "link_type": "DocType",
+   "link_to": "Vehicle",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  }
+ ],
+ "title": "Education",
+ "modified": "2026-11-17 09:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Education",
+ "number_cards": [
+  {
+   "label": "Active Students",
+   "number_card_name": "Active Students"
+  },
+  {
+   "label": "New Applications",
+   "number_card_name": "New Applications"
+  },
+  {
+   "label": "Interviews Scheduled",
+   "number_card_name": "Interviews Scheduled"
+  },
+  {
+   "label": "Accepted, Not Enrolled",
+   "number_card_name": "Accepted, Not Enrolled"
+  },
+  {
+   "label": "Fees to Invoice",
+   "number_card_name": "Fees to Invoice"
+  },
+  {
+   "label": "Invoiced Fees",
+   "number_card_name": "Invoiced Fees"
+  },
+  {
+   "label": "Registrations to Confirm",
+   "number_card_name": "Registrations to Confirm"
+  },
+  {
+   "label": "Open Courses",
+   "number_card_name": "Open Courses"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "label": "Student",
+   "link_to": "Student",
+   "type": "DocType",
+   "doc_view": "List"
+  },
+  {
+   "label": "Admission Application",
+   "link_to": "Admission Application",
+   "type": "DocType",
+   "doc_view": "List"
+  },
+  {
+   "label": "Student Fee",
+   "link_to": "Student Fee",
+   "type": "DocType",
+   "doc_view": "List"
+  },
+  {
+   "label": "Class Attendance",
+   "link_to": "Class Attendance",
+   "type": "DocType",
+   "doc_view": "List"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "creation": "2026-11-17 09:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Student",
+ "filters_json": "[[\"Student\", \"status\", \"=\", \"Active\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Active Students",
+ "modified": "2026-11-17 09:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Active Students",
+ "owner": "Administrator",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

@@ -1,0 +1,273 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 08:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student_name",
+  "status",
+  "national_id",
+  "birth_date",
+  "gender",
+  "cb1",
+  "photo",
+  "admission_date",
+  "previous_school",
+  "sb_class",
+  "grade_level",
+  "stage",
+  "institution",
+  "cb2",
+  "academic_year",
+  "section",
+  "sb_guard",
+  "guardians",
+  "payer",
+  "customer",
+  "sibling_order",
+  "sb_fees",
+  "scholarship",
+  "transport_vehicle",
+  "sb_health",
+  "blood_type",
+  "medical_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "STU-.YYYY.-.####",
+   "default": "STU-.YYYY.-.####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nGraduated\nWithdrawn\nSuspended\nTransferred",
+   "default": "Active",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National ID"
+  },
+  {
+   "fieldname": "birth_date",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "admission_date",
+   "fieldtype": "Date",
+   "label": "Admission Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "previous_school",
+   "fieldtype": "Data",
+   "label": "Previous School"
+  },
+  {
+   "fieldname": "sb_class",
+   "fieldtype": "Section Break",
+   "label": "Class"
+  },
+  {
+   "fieldname": "grade_level",
+   "fieldtype": "Link",
+   "label": "Grade or Year",
+   "options": "Grade Level",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "label": "Stage",
+   "options": "Education Stage",
+   "fetch_from": "grade_level.stage",
+   "read_only": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "institution",
+   "fieldtype": "Link",
+   "label": "Institution",
+   "options": "Education Institution",
+   "fetch_from": "grade_level.institution",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Class Section",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_guard",
+   "fieldtype": "Section Break",
+   "label": "Parents and Guardians"
+  },
+  {
+   "fieldname": "guardians",
+   "fieldtype": "Table",
+   "label": "Guardians",
+   "options": "Student Guardian",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payer",
+   "fieldtype": "Link",
+   "label": "Pays the Fees",
+   "options": "Guardian",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Fees Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sibling_order",
+   "fieldtype": "Int",
+   "label": "Order Among Siblings",
+   "read_only": 1,
+   "description": "1 for the eldest child of the payer. Sets the sibling discount."
+  },
+  {
+   "fieldname": "sb_fees",
+   "fieldtype": "Section Break",
+   "label": "Fees and Services"
+  },
+  {
+   "fieldname": "scholarship",
+   "fieldtype": "Link",
+   "label": "Scholarship",
+   "options": "Scholarship"
+  },
+  {
+   "fieldname": "transport_vehicle",
+   "fieldtype": "Link",
+   "label": "School Bus",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "sb_health",
+   "fieldtype": "Section Break",
+   "label": "Health"
+  },
+  {
+   "fieldname": "blood_type",
+   "fieldtype": "Select",
+   "label": "Blood Type",
+   "options": "\nA+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-"
+  },
+  {
+   "fieldname": "medical_notes",
+   "fieldtype": "Small Text",
+   "label": "Medical Notes and Allergies"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 08:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Student",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Education Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Registrar",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Teacher",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Education Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "title_field": "student_name",
+ "icon": "fa fa-graduation-cap",
+ "search_fields": "student_name,national_id",
+ "allow_rename": 0
+}

@@ -1,0 +1,298 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 08:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "academic_year",
+  "fee_structure",
+  "cb1",
+  "status",
+  "posting_date",
+  "first_due_date",
+  "customer",
+  "sb_items",
+  "items",
+  "sb_disc",
+  "sibling_discount_pct",
+  "scholarship_pct",
+  "cb2",
+  "scholarship_amount",
+  "sb_pay",
+  "installments",
+  "interval_months",
+  "cb3",
+  "down_payment",
+  "sb_tot",
+  "gross",
+  "sibling_discount",
+  "scholarship",
+  "cb4",
+  "net",
+  "vat",
+  "total",
+  "sb_sched",
+  "schedule_html",
+  "sb_acc",
+  "sales_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "FEE-.YYYY.-.#####",
+   "default": "FEE-.YYYY.-.#####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "fetch_from": "student.student_name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "label": "Fee Structure",
+   "options": "Fee Structure"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nInvoiced\nCancelled",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_due_date",
+   "fieldtype": "Date",
+   "label": "First Installment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_items",
+   "fieldtype": "Section Break",
+   "label": "Fees"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Fees",
+   "options": "Student Fee Item"
+  },
+  {
+   "fieldname": "sb_disc",
+   "fieldtype": "Section Break",
+   "label": "Discounts"
+  },
+  {
+   "fieldname": "sibling_discount_pct",
+   "fieldtype": "Percent",
+   "label": "Sibling Discount (%)"
+  },
+  {
+   "fieldname": "scholarship_pct",
+   "fieldtype": "Percent",
+   "label": "Scholarship (%)"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scholarship_amount",
+   "fieldtype": "Currency",
+   "label": "Scholarship (fixed)"
+  },
+  {
+   "fieldname": "sb_pay",
+   "fieldtype": "Section Break",
+   "label": "Installments"
+  },
+  {
+   "fieldname": "installments",
+   "fieldtype": "Int",
+   "label": "Number of Installments",
+   "default": 1
+  },
+  {
+   "fieldname": "interval_months",
+   "fieldtype": "Int",
+   "label": "Months Between Installments",
+   "default": 1
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "down_payment",
+   "fieldtype": "Currency",
+   "label": "Down Payment"
+  },
+  {
+   "fieldname": "sb_tot",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "gross",
+   "fieldtype": "Currency",
+   "label": "Fees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sibling_discount",
+   "fieldtype": "Currency",
+   "label": "Sibling Discount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scholarship",
+   "fieldtype": "Currency",
+   "label": "Scholarship",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net",
+   "fieldtype": "Currency",
+   "label": "After Discounts",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vat",
+   "fieldtype": "Currency",
+   "label": "VAT",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Invoice Total",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_sched",
+   "fieldtype": "Section Break",
+   "label": "Installment Schedule"
+  },
+  {
+   "fieldname": "schedule_html",
+   "fieldtype": "HTML",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "sb_acc",
+   "fieldtype": "Section Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1,
+   "no_copy": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 08:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Student Fee",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Education Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Education Registrar",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "title_field": "student_name",
+ "icon": "fa fa-file-invoice",
+ "search_fields": "student,student_name",
+ "allow_rename": 0
+}
