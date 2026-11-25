@@ -18,8 +18,9 @@ class AdmissionApplication(Document):
 		if self.interview_date and self.status == "New":
 			self.status = "Interview Scheduled"
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def set_status(self, status):
+		self.check_permission("write")
 		if status not in STATUSES:
 			frappe.throw(_("Choose one of the statuses"))
 		if self.status == "Enrolled":
@@ -41,9 +42,10 @@ class AdmissionApplication(Document):
 		self.db_set("guardian", g.name)
 		return g
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def pay_registration(self, mode_of_payment, amount=None, reference=None):
 		"""The registration fee is received from the guardian and stays as an advance: the first fees invoice uses it."""
+		self.check_permission("write")
 		if self.status in ("Rejected", "Withdrawn"):
 			frappe.throw(_("The application is {0}").format(_(self.status)))
 		if self.registration_paid:
@@ -57,8 +59,9 @@ class AdmissionApplication(Document):
 		self.db_set({"registration_entry": pe, "registration_paid": 1, "registration_fee": amount})
 		return pe
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def enroll(self, section=None):
+		self.check_permission("write")
 		if self.status != "Accepted":
 			frappe.throw(_("Accept the application first"))
 		g = self._guardian()

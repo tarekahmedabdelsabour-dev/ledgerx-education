@@ -22,8 +22,9 @@ class CourseRegistration(Document):
 				"status": ["!=", "Cancelled"], "name": ["!=", self.name or ""]}):
 			frappe.throw(_("The student is already registered for this term"))
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def confirm(self):
+		self.check_permission("write")
 		if self.status != "Draft":
 			frappe.throw(_("The registration is {0}").format(_(self.status)))
 		for r in self.items:
@@ -35,6 +36,7 @@ class CourseRegistration(Document):
 					frappe.throw(_("Row {0}: the course is full ({1})").format(r.idx, cap))
 		self.db_set("status", "Confirmed")
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def cancel_registration(self):
+		self.check_permission("write")
 		self.db_set("status", "Cancelled")

@@ -46,9 +46,10 @@ class StudentFee(Document):
 		if self.status not in statuses:
 			frappe.throw(_("The fee is {0}").format(_(self.status)))
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def confirm(self):
 		"""Invoice the guardian. Money already received from this customer (registration fee, advances) is applied."""
+		self.check_permission("write")
 		self._need("Draft")
 		s = accounting.settings()
 		if self.total <= 0:
@@ -83,9 +84,10 @@ class StudentFee(Document):
 		self.reload()
 		return inv.name
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def receive_payment(self, mode_of_payment, amount, reference=None):
 		"""A down payment or an installment: any amount up to what is still due."""
+		self.check_permission("write")
 		self._need("Invoiced")
 		out = flt(frappe.db.get_value("Sales Invoice", self.sales_invoice, "outstanding_amount"))
 		amount = flt(amount)
@@ -94,9 +96,10 @@ class StudentFee(Document):
 		return accounting.payment(self.customer, amount, accounting.money_account(mode_of_payment), self.sales_invoice,
 			_("Fees of {0} - {1}").format(self.student_name, self.name), reference=reference)
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def add_credit_hours(self, registration):
 		"""University: add a line for the credit hours the student registered."""
+		self.check_permission("write")
 		self._need("Draft")
 		reg = frappe.db.get_value("Course Registration", registration, ["student", "status", "total_credit_hours"], as_dict=True)
 		if not reg or reg.student != self.student or reg.status != "Confirmed":
@@ -111,7 +114,8 @@ class StudentFee(Document):
 		self.save()
 		return self.total
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def cancel_draft(self):
+		self.check_permission("write")
 		self._need("Draft")
 		self.db_set("status", "Cancelled")

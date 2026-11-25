@@ -16,8 +16,9 @@ class ClassAttendance(Document):
 		c = lambda s: sum(1 for r in self.students if r.status == s)
 		self.present_count, self.late_count, self.absent_count = c("Present"), c("Late"), c("Absent")
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def load_students(self):
+		self.check_permission("write")
 		have = {r.student for r in self.students}
 		for s in frappe.get_all("Student", filters={"section": self.section, "status": "Active"}, pluck="name", order_by="student_name"):
 			if s not in have:

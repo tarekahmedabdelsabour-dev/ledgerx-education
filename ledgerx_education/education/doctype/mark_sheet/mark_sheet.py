@@ -28,8 +28,9 @@ class MarkSheet(Document):
 			elif r.marks is not None and not 0 <= r.marks <= self.max_marks:
 				frappe.throw(_("Row {0}: marks must be between 0 and {1}").format(r.idx, self.max_marks))
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def load_students(self):
+		self.check_permission("write")
 		have = {r.student for r in self.students}
 		for s in students_of_offering(self.course_offering):
 			if s not in have:
