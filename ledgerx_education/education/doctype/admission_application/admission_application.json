@@ -266,5 +266,6 @@
  "title_field": "applicant_name",
  "icon": "fa fa-file-text-o",
  "search_fields": "applicant_name,guardian_name,guardian_phone",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

@@ -133,5 +133,6 @@
  "autoname": "field:institution_name",
  "title_field": "institution_name",
  "icon": "fa fa-university",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

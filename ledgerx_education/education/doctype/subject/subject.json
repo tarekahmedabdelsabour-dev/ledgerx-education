@@ -90,5 +90,6 @@
  "autoname": "field:subject_name",
  "title_field": "subject_name",
  "icon": "fa fa-book",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

@@ -294,5 +294,6 @@
  "title_field": "student_name",
  "icon": "fa fa-file-invoice",
  "search_fields": "student,student_name",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

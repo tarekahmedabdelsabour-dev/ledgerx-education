@@ -84,5 +84,6 @@
  ],
  "autoname": "field:category_name",
  "icon": "fa fa-money",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

@@ -106,5 +106,6 @@
  "autoname": "field:year_name",
  "title_field": "year_name",
  "icon": "fa fa-calendar",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

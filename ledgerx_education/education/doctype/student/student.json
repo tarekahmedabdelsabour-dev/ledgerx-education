@@ -269,5 +269,6 @@
  "title_field": "student_name",
  "icon": "fa fa-graduation-cap",
  "search_fields": "student_name,national_id",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

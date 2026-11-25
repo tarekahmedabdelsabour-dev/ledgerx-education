@@ -123,5 +123,6 @@
  "autoname": "format:{grade_level}-{section_name}-{academic_year}",
  "title_field": "section_name",
  "icon": "fa fa-users",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

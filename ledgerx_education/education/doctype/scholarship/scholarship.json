@@ -93,5 +93,6 @@
  ],
  "autoname": "field:scholarship_name",
  "icon": "fa fa-graduation-cap",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }
