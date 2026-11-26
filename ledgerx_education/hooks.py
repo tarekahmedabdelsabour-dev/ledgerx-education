@@ -5,7 +5,7 @@ app_description = "Education management from nursery to university: admissions, 
 app_email = "hello@ledgerx.local"
 app_license = "mit"
 
-required_apps = ["erpnext", "hrms"]
+required_apps = ["erpnext", "hrms", "ledgerx"]
 
 add_to_apps_screen = [
 	{

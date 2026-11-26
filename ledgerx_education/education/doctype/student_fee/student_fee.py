@@ -3,6 +3,7 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.utils import flt
 
+from ledgerx import shared
 from ledgerx_education.engine import accounting, logic
 
 
@@ -43,11 +44,7 @@ class StudentFee(Document):
 			frappe.throw(_("The down payment is more than the total"))
 
 	def _need(self, *statuses):
-		# the stored status, under a row lock: a second click or a forged client copy cannot repeat a step
-		if not self.is_new() and self.name:
-			self.status = frappe.db.get_value(self.doctype, self.name, "status", for_update=True) or self.status
-		if self.status not in statuses:
-			frappe.throw(_("The fee is {0}").format(_(self.status)))
+		shared.need_status(self, *statuses, message=_("The fee is {0}"))
 
 	@frappe.whitelist(methods=["POST"])
 	def confirm(self):
