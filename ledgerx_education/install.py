@@ -61,6 +61,7 @@ def ensure_settings():
 	if not s.grading_scale and frappe.db.exists("Grading Scale", "Default"):
 		s.grading_scale, changed = "Default", True
 	if changed and s.company:
+		s.flags.ignore_mandatory = True  # the accounts are chosen later, in the settings form
 		s.save(ignore_permissions=True)
 
 
