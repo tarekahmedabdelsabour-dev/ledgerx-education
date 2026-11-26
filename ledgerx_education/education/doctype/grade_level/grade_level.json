@@ -118,6 +118,6 @@
  "autoname": "format:{stage}-{grade_name}",
  "title_field": "grade_name",
  "icon": "fa fa-level-up",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

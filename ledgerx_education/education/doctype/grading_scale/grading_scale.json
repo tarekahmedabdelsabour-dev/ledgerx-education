@@ -78,6 +78,6 @@
  ],
  "autoname": "field:scale_name",
  "icon": "fa fa-sort-numeric-asc",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

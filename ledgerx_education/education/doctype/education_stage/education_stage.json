@@ -96,6 +96,6 @@
  "autoname": "field:stage_name",
  "title_field": "stage_name",
  "icon": "fa fa-sitemap",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

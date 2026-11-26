@@ -129,6 +129,6 @@
  "title_field": "guardian_name",
  "icon": "fa fa-user",
  "search_fields": "guardian_name,phone,national_id",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

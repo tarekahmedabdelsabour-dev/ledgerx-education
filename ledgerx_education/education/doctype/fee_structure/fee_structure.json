@@ -139,6 +139,6 @@
  "autoname": "field:structure_name",
  "title_field": "structure_name",
  "icon": "fa fa-list-alt",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

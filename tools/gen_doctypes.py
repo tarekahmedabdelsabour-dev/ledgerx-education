@@ -338,6 +338,7 @@ doctype("Student Fee", [
 	f("schedule_html", "HTML", "Schedule"),
 	sec("sb_acc", "Accounting"),
 	f("sales_invoice", "Link", "Sales Invoice", options="Sales Invoice", read_only=1, no_copy=1),
+	f("credit_note", "Link", "Credit Note", options="Sales Invoice", read_only=1, no_copy=1),
 ], autoname="naming_series:", title_field="student_name", icon="fa fa-file-invoice", search_fields="student,student_name", perms=MONEY())
 DT["Student Fee"]["fields"].insert(0, f("naming_series", "Select", "Series", options="FEE-.YYYY.-.#####", default="FEE-.YYYY.-.#####", hidden=1))
 

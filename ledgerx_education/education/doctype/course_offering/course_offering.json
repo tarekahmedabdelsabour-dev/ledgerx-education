@@ -158,6 +158,6 @@
  "title_field": "title",
  "icon": "fa fa-clock-o",
  "search_fields": "subject,teacher,academic_year",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

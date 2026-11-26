@@ -87,6 +87,6 @@
  "autoname": "field:faculty_name",
  "title_field": "faculty_name",
  "icon": "fa fa-building",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

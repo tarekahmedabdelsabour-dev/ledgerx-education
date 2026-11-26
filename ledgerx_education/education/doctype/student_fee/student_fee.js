@@ -36,6 +36,8 @@ frappe.ui.form.on("Student Fee", {
 			frm.add_custom_button(__("Cancel Draft"), () => act("cancel_draft"), __("More"));
 		}
 		if (frm.doc.status === "Invoiced") {
+			frm.add_custom_button(__("Issue Credit Note"), () => ask(__("Issue Credit Note"), [
+				{ fieldname: "reason", fieldtype: "Small Text", label: __("Reason"), reqd: 1 }], "issue_credit_note"), __("More"));
 			frm.add_custom_button(__("Receive Payment"), () => ask(__("Receive Payment"), [
 				{ fieldname: "mode_of_payment", fieldtype: "Link", options: "Mode of Payment", label: __("Mode of Payment"), reqd: 1 },
 				{ fieldname: "amount", fieldtype: "Currency", label: __("Amount"), reqd: 1 },

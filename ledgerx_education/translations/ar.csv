@@ -366,3 +366,6 @@ Where students go at the end of the year. Empty for the last year.,الصف ال
 Withdrawn,منسحب
 {0} credit hours,{0} ساعة معتمدة
 {0} was absent {1} times in the last 30 days: contact the guardian,{0} تغيب {1} مرات خلال آخر 30 يوماً: تواصل مع ولي الأمر
+An invoiced fee cannot be deleted. Issue a credit note instead.,لا يمكن حذف رسوم تمت فوترتها. أصدر إشعارًا دائنًا بدلًا من ذلك.
+Issue Credit Note,إصدار إشعار دائن
+Credit Note,إشعار دائن

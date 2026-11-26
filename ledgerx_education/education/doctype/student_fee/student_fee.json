@@ -37,7 +37,8 @@
   "sb_sched",
   "schedule_html",
   "sb_acc",
-  "sales_invoice"
+  "sales_invoice",
+  "credit_note"
  ],
  "fields": [
   {
@@ -240,6 +241,14 @@
    "options": "Sales Invoice",
    "read_only": 1,
    "no_copy": 1
+  },
+  {
+   "fieldname": "credit_note",
+   "fieldtype": "Link",
+   "label": "Credit Note",
+   "options": "Sales Invoice",
+   "read_only": 1,
+   "no_copy": 1
   }
  ],
  "links": [],
@@ -294,6 +303,6 @@
  "title_field": "student_name",
  "icon": "fa fa-file-invoice",
  "search_fields": "student,student_name",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

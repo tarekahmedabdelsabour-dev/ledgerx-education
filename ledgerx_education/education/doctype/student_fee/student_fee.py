@@ -114,6 +114,19 @@ class StudentFee(Document):
 		self.save()
 		return self.total
 
+	def on_trash(self):
+		if self.status not in ("Draft", "Cancelled") or self.sales_invoice:
+			frappe.throw(_("An invoiced fee cannot be deleted. Issue a credit note instead."))
+
+	@frappe.whitelist(methods=["POST"])
+	def issue_credit_note(self, reason):
+		"""The way to correct an invoiced fee: a credit note against the invoice (the invoice itself is never cancelled)."""
+		self.check_permission("write")
+		self._need("Invoiced")
+		note = shared.credit_note(self.sales_invoice, reason)
+		self.db_set({"credit_note": note, "status": "Cancelled"})
+		return note
+
 	@frappe.whitelist(methods=["POST"])
 	def cancel_draft(self):
 		self.check_permission("write")
